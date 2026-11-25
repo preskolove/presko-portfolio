@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presko Media — Straight Hustle</title>
+<meta name="description" content="Paolo Barcelona / Presko Media LLC — athlete stories, promos and event films. Video, photography, editing and color.">
+<meta property="og:title" content="Presko Media — Portfolio">
+<meta property="og:description" content="Athlete stories, promos and event films by Paolo Barcelona.">
+<meta property="og:image" content="https://gallery.preskomedia.com/brand/preskolove.png">
+<link rel="icon" href="logos/preskolove.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: confident, gritty, premium — a fighter's walkout, not a corporate deck
+   IDEA: an editor's timeline / contact sheet laid on the dark technical grid (Presko house style)
+   PICTURE: the reels themselves, big, side by side like clips on a bin
+   COLOUR and TYPE: near-black grid, bone white, one hot orange from the logo; Archivo condensed + Inter
+   LAYOUT: logo bar, hero with reels, featured athletes, services, contact footer */
+:root{color-scheme:dark;--bg:#0a0a0b;--panel:#121214;--line:rgba(255,255,255,.07);--ink:#f1ede6;--dim:#9c978f;--hot:#ff6a1a}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:48px 48px;background-attachment:fixed}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 max(5vw,16px)}
+h1,h2,h3{font-family:Archivo,Impact,sans-serif;font-stretch:78%;font-weight:850;line-height:1.02;margin:0;text-wrap:balance}
+h1{font-size:clamp(56px,10vw,132px);letter-spacing:-.01em;line-height:.95}
+h2{font-size:clamp(32px,4.5vw,52px)}
+h3{font-size:26px}
+p{margin:0}
+.lede{font-size:17px;color:var(--dim);max-width:60ch}
+.hot{color:var(--hot)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:5;background:rgba(10,10,11,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:88px}
+nav img{height:76px;width:auto;display:block}
+nav ul{display:flex;gap:clamp(12px,3vw,32px);list-style:none;margin:0;padding:0;font-weight:500;font-size:15px}
+nav ul a{text-decoration:none;color:var(--dim)}nav ul a:hover,nav ul a:focus-visible{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;background:var(--hot);color:#140800;font-weight:600;text-decoration:none;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid rgba(255,255,255,.22)}
+:focus-visible{outline:2px solid var(--hot);outline-offset:3px}
+
+/* hero */
+.hero{padding:clamp(40px,7vw,96px) 0 clamp(32px,5vw,64px)}
+.hero .top{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:end;margin-bottom:clamp(32px,5vw,56px)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.14)}
+.facts div{padding:14px 12px 0 0}
+.facts b{display:block;font-family:Archivo,sans-serif;font-stretch:78%;font-size:clamp(20px,2.2vw,28px);line-height:1.1}
+.facts span{font-size:14px;color:var(--dim)}
+
+/* reels = clips in a bin */
+.reels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:start}
+.clip{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px;position:relative}
+.clip .tc{display:flex;justify-content:space-between;font-size:13px;color:var(--dim);padding:2px 6px 8px}
+.clip .tc i{font-style:normal;color:var(--hot)}
+.clip{display:block;text-decoration:none;transition:border-color .25s}
+.clip:hover{border-color:rgba(255,106,26,.55)}
+.thumb{position:relative;aspect-ratio:9/16;overflow:hidden;border-radius:8px;background:#000}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.clip:hover .thumb img{transform:scale(1.04)}
+.watch{position:absolute;left:10px;bottom:10px;font-size:13px;font-weight:600;color:#fff;background:rgba(10,10,11,.72);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:6px 12px;white-space:nowrap}
+.clip:hover .watch{background:var(--hot);color:#140800;border-color:var(--hot)}
+
+/* sections */
+.band{padding:clamp(48px,7vw,104px) 0;border-top:1px solid var(--line)}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:clamp(24px,4vw,44px)}
+.athletes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ath{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:12px;transition:border-color .25s}
+.ath:hover{border-color:rgba(255,106,26,.5)}
+.ath .who{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+.ath .rank{align-self:flex-start;font-size:13px;font-weight:700;color:#140800;background:var(--hot);border-radius:999px;padding:5px 12px;margin-top:-30px;position:relative;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.ath .tag{font-size:14px;color:var(--hot);font-weight:600}
+.ath p{color:var(--dim)}
+.ath .roles{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px}
+.ath .roles span{font-size:13px;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:4px 12px}
+
+.logos{margin-top:clamp(28px,4vw,44px);padding-top:24px;border-top:1px solid var(--line)}
+.logos small{display:block;color:var(--dim);font-size:14px;margin-bottom:20px}
+.marq{container-type:inline-size;overflow:hidden;border-top:1px solid var(--line);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marq:last-child{border-bottom:1px solid var(--line)}
+.track{display:flex;width:max-content;animation:slide 30s linear infinite}
+.marq.rev .track{animation-direction:reverse}
+.marq:hover .track{animation-play-state:paused}
+.cell{flex:0 0 33.333cqw;height:clamp(92px,11vw,128px);display:flex;align-items:center;justify-content:center;border-right:1px solid var(--line)}
+.cell img{height:var(--h);max-width:70%;width:auto;object-fit:contain;opacity:.72;transition:opacity .25s}
+.cell:hover img{opacity:1}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media(max-width:600px){.cell img{height:calc(var(--h)*.62)}}
+@media(prefers-reduced-motion:reduce){.track{animation:none}}
+
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid rgba(255,255,255,.14)}
+.svc{padding:24px 24px 28px 0;border-bottom:1px solid var(--line)}
+.svc h3{margin-bottom:8px}.svc p{color:var(--dim);font-size:15.5px}
+
+.contact{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.contact .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:clamp(20px,3vw,32px);display:grid;gap:18px}
+.contact .row small{display:block;color:var(--dim);font-size:13px}
+.contact .row a{font-size:19px;font-weight:600;text-decoration:none;overflow-wrap:anywhere}
+.contact .row a:hover{color:var(--hot)}
+footer{padding:28px 0 40px;color:var(--dim);font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* stills */
+.hero{position:relative;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,10,11,.55) 0%,rgba(10,10,11,.88) 55%,var(--bg) 100%),url(stills/still-11.jpg) center 30%/cover no-repeat}
+.ath .cover{margin:calc(-1*clamp(20px,3vw,32px)) calc(-1*clamp(20px,3vw,32px)) 4px;aspect-ratio:16/9;overflow:hidden;border-radius:16px 16px 0 0;background:#000}
+.ath .cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.ath:hover .cover img{transform:scale(1.04)}
+.stills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;grid-auto-flow:dense}
+.still{margin:0;cursor:zoom-in;background:none;border:0;padding:0;text-align:left;color:inherit;font:inherit}
+.still img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:10px;background:#000;transition:opacity .3s}
+.still:hover img{opacity:.85}
+.still span{display:block;font-size:13px;color:var(--dim);padding-top:6px}
+.still.wide{grid-column:span 3}
+.still.wide img{aspect-ratio:21/9}
+.lb{position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;padding:4vw}
+.lb.open{display:flex}
+.lb img{max-width:100%;max-height:88vh;border-radius:8px}
+.lb button{position:absolute;top:14px;right:14px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:22px;cursor:pointer}
+@media(max-width:760px){.stills{grid-template-columns:repeat(2,minmax(0,1fr))}.still.wide{grid-column:span 2}.still.wide img{aspect-ratio:16/9}}
+@media(max-width:480px){.stills{grid-template-columns:minmax(0,1fr)}.still.wide{grid-column:auto}}
+
+.rise{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rise.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rise{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn{transition:none}}
+
+@media(max-width:960px){.reels{grid-template-columns:repeat(2,minmax(0,1fr))}.services{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.hero .top,.contact{grid-template-columns:minmax(0,1fr)}.athletes{grid-template-columns:minmax(0,1fr)}nav ul li.opt{display:none}}
+@media(max-width:600px){.reels{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px}.clip{flex:0 0 78%;scroll-snap-align:start}.services{grid-template-columns:minmax(0,1fr)}.facts b{font-size:28px}nav img{height:58px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" aria-label="Presko Media home"><img src="logos/preskolove.png" alt="preskolove"></a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#athletes">Athletes</a></li>
+      <li class="opt"><a href="#stills">Stills</a></li>
+      <li class="opt"><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="top rise">
+      <div>
+        <h1>Straight <span class="hot">HUSTLE.</span></h1>
+        <div class="cta">
+          <a class="btn" href="#work">Watch the work</a>
+          <a class="btn ghost" href="mailto:preskolove@preskomedia.com">Work with me</a>
+        </div>
+      </div>
+      <div>
+        <p class="lede">I'm Paolo Barcelona, the videographer and creative director behind Presko Media LLC. I shoot, edit and color-grade athlete stories, promos and event coverage for a top-10 Olympia bodybuilder, a top-5 featherweight in the world, NFL players and the brands around them, from the gym floor to the final grade.</p>
+        <div class="facts" style="margin-top:24px">
+          <div><b>2019</b><span>Shooting since</span></div>
+          <div><b>In‑house</b><span>Shoot, edit, grade</span></div>
+          <div><b>Video + photo</b><span>Every shoot</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section id="work" aria-label="Selected reels">
+      <div class="reels" id="reels"></div>
+    </section>
+  </div>
+</header>
+
+<section class="band" id="athletes">
+  <div class="wrap">
+    <div class="head rise">
+      <h2>Featured athletes</h2>
+      <p class="lede">These are long-term relationships, not one-off shoots. I've built story-driven content with each of these athletes over many projects.</p>
+    </div>
+    <div class="athletes" id="ath"></div>
+    <div class="logos rise" aria-label="Organizations">
+      <small>Work featuring athletes and organizations from</small>
+      <div class="marq"><div class="track"><div class="cell"><img src="logos/logo-nfl.png" alt="NFL" style="--h:62px"></div><div class="cell"><img src="logos/logo-one.png" alt="ONE Championship" style="--h:56px"></div><div class="cell"><img src="logos/logo-tyr.png" alt="TYR" style="--h:34px"></div><div class="cell"><img src="logos/logo-nfl.png" alt="NFL" style="--h:62px"></div><div class="cell"><img src="logos/logo-one.png" alt="ONE Championship" style="--h:56px"></div><div class="cell"><img src="logos/logo-tyr.png" alt="TYR" style="--h:34px"></div><div class="cell"><img src="logos/logo-nfl.png" alt="NFL" style="--h:62px"></div><div class="cell"><img src="logos/logo-one.png" alt="ONE Championship" style="--h:56px"></div><div class="cell"><img src="logos/logo-tyr.png" alt="TYR" style="--h:34px"></div><div class="cell"><img src="logos/logo-nfl.png" alt="NFL" style="--h:62px"></div><div class="cell"><img src="logos/logo-one.png" alt="ONE Championship" style="--h:56px"></div><div class="cell"><img src="logos/logo-tyr.png" alt="TYR" style="--h:34px"></div></div></div>
+      <div class="marq rev"><div class="track"><div class="cell"><img src="logos/logo-off.png" alt="Only Fights Federation" style="--h:66px"></div><div class="cell"><img src="logos/logo-asylum.png" alt="Asylum Sports Performance and Recovery" style="--h:40px"></div><div class="cell"><img src="logos/logo-pwrbld.png" alt="PWRBLD Gym" style="--h:48px"></div><div class="cell"><img src="logos/logo-off.png" alt="Only Fights Federation" style="--h:66px"></div><div class="cell"><img src="logos/logo-asylum.png" alt="Asylum Sports Performance and Recovery" style="--h:40px"></div><div class="cell"><img src="logos/logo-pwrbld.png" alt="PWRBLD Gym" style="--h:48px"></div><div class="cell"><img src="logos/logo-off.png" alt="Only Fights Federation" style="--h:66px"></div><div class="cell"><img src="logos/logo-asylum.png" alt="Asylum Sports Performance and Recovery" style="--h:40px"></div><div class="cell"><img src="logos/logo-pwrbld.png" alt="PWRBLD Gym" style="--h:48px"></div><div class="cell"><img src="logos/logo-off.png" alt="Only Fights Federation" style="--h:66px"></div><div class="cell"><img src="logos/logo-asylum.png" alt="Asylum Sports Performance and Recovery" style="--h:40px"></div><div class="cell"><img src="logos/logo-pwrbld.png" alt="PWRBLD Gym" style="--h:48px"></div></div></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="stills">
+  <div class="wrap">
+    <div class="head rise">
+      <h2>Stills</h2>
+      <p class="lede">Frames from the work: fight camps, bodybuilding stages, game days and gym floors. All shot and graded in-house.</p>
+    </div>
+    <div class="stills" id="stillgrid"></div>
+  </div>
+</section>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Still preview"><button type="button" id="lbx" aria-label="Close">×</button><img id="lbimg" alt=""></div>
+
+<section class="band" id="services">
+  <div class="wrap">
+    <div class="head rise"><h2>What I make</h2></div>
+    <div class="services" id="svc"></div>
+  </div>
+</section>
+
+<section class="band" id="contact">
+  <div class="wrap contact">
+    <div class="rise">
+      <h2>Have a campaign, athlete or event that needs a story told?</h2>
+      <p class="lede" style="margin-top:16px">I'm open to brand partnerships, contract productions and creative roles. Send a line about what you're building and I'll get back to you.</p>
+    </div>
+    <div class="card rise">
+      <div class="row"><small>Email</small><a href="mailto:preskolove@preskomedia.com">preskolove@preskomedia.com</a></div>
+      <div class="row"><small>Instagram</small><a href="https://www.instagram.com/preskolove/" target="_blank" rel="noopener">@preskolove</a></div>
+      <div class="row"><small>Based in</small><span style="font-size:19px;font-weight:600">South Jersey · Philadelphia area. Available to travel</span></div>
+      <a class="btn" href="mailto:preskolove@preskomedia.com?subject=Project%20inquiry">Start a project</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Presko Media LLC</span>
+    <a href="https://btstvonline.com/directory/paolo-barcelona" target="_blank" rel="noopener">As featured on BTS TV</a>
+  </div>
+</footer>
+
+<script>
+{
+  const reels = [
+    {id:'Deau4Fyskxi', thumb:'reel-showreel', label:'Showreel · Sony trend'},
+    {id:'DczQ0ocOrxE', thumb:'reel-luke', label:'Luke Lessei · ONE'},
+    {id:'DfU77RiiT9z', thumb:'reel-asylum', label:'Asylum · Commercial'},
+    {id:'DdpFdUbNO_2', thumb:'reel-genard', label:'Genard Avery · NFL'}
+  ];
+  const athletes = [
+    {img:'still-06',name:'Justin Badurina', tag:'Bodybuilding', rank:'Top-10 Olympian', text:'One of the top 10 bodybuilders at the Olympia, the sport\'s biggest stage. I cover his Olympia peak week, his weekly YouTube long-form and shorts, and his TYR collab content.', roles:['Olympia coverage','YouTube','Brand collabs','Shorts']},
+    {img:'still-15',name:'Genard Avery', tag:'NFL', text:'A voiceover-driven athlete story film that follows the person behind the player.', roles:['Story film','Voiceover edit','Color']},
+    {img:'still-09',name:'Tyler Dunham', tag:'Adaptive athlete', text:'An ongoing story of a wheelchair athlete, plus YouTube collaborations and a weekly social series.', roles:['Documentary','YouTube','Social series']},
+    {img:'luke-card',name:'Luke Lessei', tag:'ONE Championship', rank:'Top-5 featherweight in the world', text:'A top-5 featherweight in the world, fighting on ONE Championship. I handle creative direction on his promos and fight-week hype videos.', roles:['Creative direction','Promos','Hype edits']}
+  ];
+  const services = [
+    ['Athlete story films','Documentary-style pieces built around voiceover, interviews and training footage.'],
+    ['Promos & commercials','Fight-week hype edits and brand commercials, such as a spot for Asylum Sports Clinic, made for social and broadcast.'],
+    ['Event coverage','Competitions and live events, from bodybuilding shows to Golden Gloves boxing.'],
+    ['Photography','Stills shot alongside the video, delivered through a private branded client gallery.'],
+    ['Editing & color','Edited and color-graded in DaVinci Resolve, including footage shot in dark, mixed-light gyms.'],
+    ['Social content','Vertical cuts for Reels, Shorts and TikTok, plus behind-the-scenes content.']
+  ];
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  document.getElementById('reels').innerHTML = reels.map(r => `
+    <a class="clip rise" href="https://www.instagram.com/reel/${esc(r.id)}/" target="_blank" rel="noopener" aria-label="Watch ${esc(r.label)} on Instagram">
+      <div class="tc"><span>${esc(r.label)}</span><i>▶</i></div>
+      <div class="thumb"><img src="thumbs/${esc(r.thumb)}.jpg" alt="${esc(r.label)}"><span class="watch">Watch on Instagram ↗</span></div>
+    </a>`).join('');
+
+  document.getElementById('ath').innerHTML = athletes.map(a => `
+    <article class="ath rise">
+      <div class="cover"><img src="stills/${esc(a.img)}.jpg" alt="${esc(a.name)}" loading="lazy"></div>
+      ${a.rank?`<span class="rank">${esc(a.rank)}</span>`:''}
+      <div class="who"><h3>${esc(a.name)}</h3><span class="tag">${esc(a.tag)}</span></div>
+      <p>${esc(a.text)}</p>
+      <div class="roles">${a.roles.map(r => `<span>${esc(r)}</span>`).join('')}</div>
+    </article>`).join('');
+
+  document.getElementById('svc').innerHTML = services.map(s => `
+    <div class="svc rise"><h3>${esc(s[0])}</h3><p>${esc(s[1])}</p></div>`).join('');
+
+
+  const stills = [
+    ['still-13','Bodybuilding · training',1],['still-02','Fight camp'],['still-17','Game day'],
+    ['still-04','Bodybuilding · stage'],['still-07','Backstage'],['still-03','Fight camp'],
+    ['still-16','Football · training'],['still-10','Backstage · B&W'],['still-12','Pump-up'],
+    ['still-14','Portrait'],['still-05','Bodybuilding · posing'],['still-19','Motion'],
+    ['still-20','Portrait'],['still-01','Asylum · commercial',1]
+  ];
+  document.getElementById('stillgrid').innerHTML = stills.map(s => `
+    <button type="button" class="still rise${s[2]?' wide':''}" data-src="stills/${esc(s[0])}.jpg">
+      <img src="stills/${esc(s[0])}.jpg" alt="${esc(s[1])}" loading="lazy" decoding="async"><span>${esc(s[1])}</span>
+    </button>`).join('');
+  const lb = document.getElementById('lb'), lbimg = document.getElementById('lbimg');
+  const closeLb = () => { lb.classList.remove('open'); lbimg.removeAttribute('src'); };
+  document.getElementById('stillgrid').addEventListener('click', e => {
+    const b = e.target.closest('.still'); if (!b) return;
+    lbimg.src = b.dataset.src; lbimg.alt = b.querySelector('img').alt; lb.classList.add('open');
+  });
+  lb.addEventListener('click', e => { if (e.target !== lbimg) closeLb(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+  document.querySelectorAll('.rise').forEach(el => io.observe(el));
+
+}
+</script>
+</body>
+</html>
